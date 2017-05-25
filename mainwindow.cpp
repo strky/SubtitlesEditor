@@ -52,8 +52,6 @@ MainWindow::MainWindow(QWidget *parent) :
 
     connect(playlistWidget, SIGNAL(doubleClicked(QModelIndex)),
             this, SLOT(OnDoubleClickPlaylist(QModelIndex)));
-
-
 }
 
 MainWindow::~MainWindow()
@@ -160,7 +158,6 @@ void MainWindow::OnStateChanged(QMediaPlayer::State status)
 
         mediaPlayer.setMedia(QUrl::fromLocalFile(
              playlistWidget->item(playlistWidget->currentRow())->text()));
-
     }
 
 }
@@ -212,6 +209,6 @@ void MainWindow::SetPause()
 {
     mediaPlayer.pause();
     ui->buttonPlay->setIcon(style()->standardIcon(QStyle::SP_MediaPlay));
-
 }
+//konec
 
